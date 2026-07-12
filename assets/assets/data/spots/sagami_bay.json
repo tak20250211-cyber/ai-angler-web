@@ -1,0 +1,256 @@
+{
+  "region_id": "sagami_bay",
+  "tier": "detailed",
+  "spots": [
+    {
+      "id": "sagami_001",
+      "name": "平塚新港",
+      "lat": 35.3061,
+      "lng": 139.3439,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "アオリイカ",
+        "青物"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ近い"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "船揚場・漁港機能あり。釣り開放エリアと立入禁止を要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "sagami_002",
+      "name": "大磯港",
+      "lat": 35.3067,
+      "lng": 139.3097,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "メジナ",
+        "アオリイカ",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "釣り開放区域あり。開放時間・区域は現地表示を要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "sagami_003",
+      "name": "小田原早川港（新堤防）",
+      "lat": 35.2325,
+      "lng": 139.1533,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "青物",
+        "クロダイ",
+        "メジナ"
+      ],
+      "facilities": [
+        "駐車場近い",
+        "飲食店近い"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "漁港。立入禁止の堤防も多い。釣り可能な範囲を要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "sagami_004",
+      "name": "江の島（湘南港・表磯）",
+      "lat": 35.2989,
+      "lng": 139.4808,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "rocky",
+      "types_allowed": [
+        "ウキ釣り",
+        "ルアー",
+        "エギング"
+      ],
+      "target_fish": [
+        "メジナ",
+        "クロダイ",
+        "アオリイカ",
+        "青物"
+      ],
+      "facilities": [
+        "トイレ近い",
+        "飲食店近い"
+      ],
+      "family_friendly": false,
+      "night_fishing": false,
+      "fee": "無料",
+      "notes": "表磯は磯場で波に注意。高波・うねり時は立入危険。ライフジャケット必須。要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "sagami_005",
+      "name": "茅ヶ崎港",
+      "lat": 35.3125,
+      "lng": 139.4028,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "アオリイカ",
+        "シロギス"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "小規模漁港。釣り可能範囲・駐車ルールを要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "sagami_006",
+      "name": "真鶴半島（磯）",
+      "lat": 35.1567,
+      "lng": 139.1583,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "rocky",
+      "types_allowed": [
+        "ウキ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "メジナ",
+        "クロダイ",
+        "イシダイ",
+        "青物"
+      ],
+      "facilities": [
+        "駐車場近い"
+      ],
+      "family_friendly": false,
+      "night_fishing": false,
+      "fee": "無料",
+      "notes": "本格磯。潮位・波・足場に十分注意。単独釣行を避け装備を万全に。要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "sagami_007",
+      "name": "国府津海岸",
+      "lat": 35.26,
+      "lng": 139.2075,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "surf",
+      "types_allowed": [
+        "投げ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "シロギス",
+        "青物",
+        "ヒラメ",
+        "サバ"
+      ],
+      "facilities": [
+        "駐車場近い"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "急深のゴロタ・砂利浜。波・引き波に注意。ライフジャケット推奨。要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "sagami_008",
+      "name": "真鶴港",
+      "lat": 35.1567,
+      "lng": 139.1394,
+      "region": "相模湾",
+      "prefecture": "神奈川県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ウキ釣り",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "メジナ",
+        "アオリイカ",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ近い"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "港内は比較的穏やか。渡船利用の沖磯は別。港のルールを要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    }
+  ]
+}

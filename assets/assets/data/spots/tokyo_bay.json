@@ -1,0 +1,272 @@
+{
+  "region_id": "tokyo_bay",
+  "tier": "detailed",
+  "spots": [
+    {
+      "id": "tokyo_001",
+      "name": "本牧海づり施設",
+      "lat": 35.4111,
+      "lng": 139.6733,
+      "region": "東京湾",
+      "prefecture": "神奈川県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "シーバス",
+        "カサゴ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "柵",
+        "レンタル竿"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "有料",
+      "notes": "柵のある海釣り施設で初心者・家族向け。入場料・営業時間・休園日は公式で要確認。",
+      "official_url": "https://www.yokohama-fishingpiers.jp/",
+      "verified_date": "2026-07",
+      "source_url": "https://www.yokohama-fishingpiers.jp/"
+    },
+    {
+      "id": "tokyo_002",
+      "name": "大黒海づり施設",
+      "lat": 35.4586,
+      "lng": 139.69,
+      "region": "東京湾",
+      "prefecture": "神奈川県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "クロダイ",
+        "シーバス"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "柵",
+        "レンタル竿"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "有料",
+      "notes": "柵付きの海釣り施設。入場料・営業時間・休園日は公式で要確認。",
+      "official_url": "https://www.yokohama-fishingpiers.jp/",
+      "verified_date": "2026-07",
+      "source_url": "https://www.yokohama-fishingpiers.jp/"
+    },
+    {
+      "id": "tokyo_003",
+      "name": "磯子海釣り施設",
+      "lat": 35.3889,
+      "lng": 139.6206,
+      "region": "東京湾",
+      "prefecture": "神奈川県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "メジナ",
+        "カサゴ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "柵",
+        "レンタル竿"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "有料",
+      "notes": "柵付きで安全。入場料・営業時間・休園日は公式で要確認。",
+      "official_url": "https://www.yokohama-fishingpiers.jp/",
+      "verified_date": "2026-07",
+      "source_url": "https://www.yokohama-fishingpiers.jp/"
+    },
+    {
+      "id": "tokyo_004",
+      "name": "若洲海浜公園（海釣り施設）",
+      "lat": 35.6247,
+      "lng": 139.8267,
+      "region": "東京湾",
+      "prefecture": "東京都",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "シーバス",
+        "カレイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "柵"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "無料",
+      "notes": "護岸と防波堤。防波堤側は状況により制限あり。営業時間・利用ルールを要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "tokyo_005",
+      "name": "城南島海浜公園",
+      "lat": 35.5817,
+      "lng": 139.7869,
+      "region": "東京湾",
+      "prefecture": "東京都",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ハゼ釣り"
+      ],
+      "target_fish": [
+        "ハゼ",
+        "シーバス",
+        "イワシ",
+        "サッパ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "無料",
+      "notes": "公園内の護岸。釣り可能エリア・時間は公園ルールを要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "tokyo_006",
+      "name": "東扇島西公園",
+      "lat": 35.4906,
+      "lng": 139.7539,
+      "region": "東京湾",
+      "prefecture": "神奈川県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "クロダイ",
+        "シーバス"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "人気の護岸公園。夜間も人が多い。混雑時のマナー・駐車ルールを要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "tokyo_007",
+      "name": "ふれーゆ裏",
+      "lat": 35.4747,
+      "lng": 139.6939,
+      "region": "東京湾",
+      "prefecture": "神奈川県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "シーバス",
+        "クロダイ"
+      ],
+      "facilities": [
+        "トイレ近い",
+        "駐車場近い"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "護岸沿いの人気ポイント。柵は限定的。混雑・駐車問題があり配慮が必要。要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "tokyo_008",
+      "name": "大井ふ頭中央海浜公園（なぎさの森）",
+      "lat": 35.5811,
+      "lng": 139.755,
+      "region": "東京湾",
+      "prefecture": "東京都",
+      "type": "river_mouth",
+      "types_allowed": [
+        "ハゼ釣り",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "ハゼ",
+        "シーバス",
+        "テナガエビ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "無料",
+      "notes": "運河・河口寄りでハゼの好ポイント。公園ルールを要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    }
+  ]
+}

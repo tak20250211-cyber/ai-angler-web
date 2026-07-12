@@ -1,0 +1,321 @@
+{
+  "region_id": "suruga_bay",
+  "tier": "detailed",
+  "spots": [
+    {
+      "id": "suruga_001",
+      "name": "清水港 日の出埠頭",
+      "lat": 35.0107,
+      "lng": 138.5008,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "クロダイ",
+        "シーバス"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "コンビニ近い"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "港内で足場が比較的よい。立入禁止区域やフェンスの有無は現地表示を要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_002",
+      "name": "三保真崎海岸",
+      "lat": 34.9986,
+      "lng": 138.5236,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "surf",
+      "types_allowed": [
+        "投げ釣り",
+        "ルアー",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "シロギス",
+        "クロダイ",
+        "カサゴ",
+        "青物",
+        "タチウオ"
+      ],
+      "facilities": [
+        "駐車場"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "急深で潮通しが良い。波・足場に注意（要確認）。ライフジャケット推奨。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_003",
+      "name": "用宗港",
+      "lat": 34.9308,
+      "lng": 138.3675,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "エギング",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "アオリイカ",
+        "クロダイ",
+        "シロギス"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "食堂近い"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "漁港のため漁業関係者・係留場所の優先に配慮。ローカルルール要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_004",
+      "name": "由比港",
+      "lat": 35.1067,
+      "lng": 138.5688,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "クロダイ",
+        "メジナ"
+      ],
+      "facilities": [
+        "駐車場"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "漁港。桜えびで有名な漁業の町。作業の妨げにならないよう配慮。ルール要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_005",
+      "name": "焼津港（新港）",
+      "lat": 34.8622,
+      "lng": 138.3211,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "アオリイカ",
+        "青物",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ近い"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "大型漁港で立入禁止エリアが多い。釣り可能な場所と時間帯は現地表示を必ず要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_006",
+      "name": "大井川港",
+      "lat": 34.7736,
+      "lng": 138.2778,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "投げ釣り",
+        "サビキ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "シロギス",
+        "アジ",
+        "青物",
+        "ヒラメ"
+      ],
+      "facilities": [
+        "駐車場"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "潮通しが良く青物も。立入禁止の堤防先端に注意。ルール要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_007",
+      "name": "田子の浦港",
+      "lat": 35.1319,
+      "lng": 138.6803,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "シーバス",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ近い"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "富士山を望む港。工業港のため立入区域を要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_008",
+      "name": "沼津港",
+      "lat": 35.0925,
+      "lng": 138.8558,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "エギング",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "アオリイカ",
+        "クロダイ",
+        "タチウオ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "飲食店多い"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "観光地で飲食店が多い。釣り可能エリアは限られるため現地表示を要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_009",
+      "name": "静浦漁港",
+      "lat": 35.07,
+      "lng": 138.8797,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "エギング",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "アオリイカ",
+        "メジナ",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場近い"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "内浦湾寄りで比較的穏やか。漁港ルール・駐車マナー要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    },
+    {
+      "id": "suruga_010",
+      "name": "興津川河口",
+      "lat": 35.0561,
+      "lng": 138.5236,
+      "region": "駿河湾",
+      "prefecture": "静岡県",
+      "type": "river_mouth",
+      "types_allowed": [
+        "ルアー",
+        "ウキ釣り",
+        "ちょい投げ"
+      ],
+      "target_fish": [
+        "シーバス",
+        "クロダイ",
+        "ハゼ",
+        "アユ"
+      ],
+      "facilities": [],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "河口。増水・濁り時は危険。河川の遊漁ルール（アユ等）を要確認。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": null
+    }
+  ]
+}

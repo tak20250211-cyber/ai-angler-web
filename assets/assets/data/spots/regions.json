@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "regions": [
+    {
+      "id": "suruga_bay",
+      "name": "駿河湾",
+      "prefectures": [
+        "静岡県"
+      ],
+      "center": {
+        "lat": 34.97,
+        "lng": 138.45
+      },
+      "tier": "detailed",
+      "file": "suruga_bay.json"
+    },
+    {
+      "id": "tokyo_bay",
+      "name": "東京湾",
+      "prefectures": [
+        "東京都",
+        "神奈川県"
+      ],
+      "center": {
+        "lat": 35.45,
+        "lng": 139.75
+      },
+      "tier": "detailed",
+      "file": "tokyo_bay.json"
+    },
+    {
+      "id": "sagami_bay",
+      "name": "相模湾",
+      "prefectures": [
+        "神奈川県"
+      ],
+      "center": {
+        "lat": 35.25,
+        "lng": 139.3
+      },
+      "tier": "detailed",
+      "file": "sagami_bay.json"
+    }
+  ]
+}
