@@ -73,6 +73,42 @@
         return { lat: loc.lat(), lng: loc.lng(), label: results[0].formatted_address };
       } catch (e) { return null; }
     };
+    // 出発地 → 各目的地の「実際の道路移動時間/距離」（Distance Matrix）。
+    // destsJson = "[[lat,lng],...]"、mode = DRIVING|WALKING|BICYCLING。
+    // 戻り値：[{min:分, km:キロ}]（経路不明は {min:null,km:null}）。
+    window.aiAnglerDistanceMatrix = function (oLat, oLng, destsJson, mode) {
+      return new Promise(function (resolve) {
+        try {
+          const dests = JSON.parse(destsJson);
+          const nulls = dests.map(function () { return { min: null, km: null }; });
+          if (!(window.google && google.maps)) { resolve(nulls); return; }
+          const svc = new google.maps.DistanceMatrixService();
+          svc.getDistanceMatrix({
+            origins: [new google.maps.LatLng(oLat, oLng)],
+            destinations: dests.map(function (d) {
+              return new google.maps.LatLng(d[0], d[1]);
+            }),
+            travelMode: mode || 'DRIVING',
+          }, function (res, status) {
+            if (status !== 'OK' || !res || !res.rows || !res.rows[0]) {
+              resolve(nulls); return;
+            }
+            resolve(res.rows[0].elements.map(function (e) {
+              if (e.status === 'OK' && e.duration && e.distance) {
+                return {
+                  min: Math.round(e.duration.value / 60),
+                  km: Math.round((e.distance.value / 1000) * 10) / 10,
+                };
+              }
+              return { min: null, km: null };
+            }));
+          });
+        } catch (e) {
+          try { resolve(JSON.parse(destsJson).map(function () { return { min: null, km: null }; })); }
+          catch (_) { resolve([]); }
+        }
+      });
+    };
   </script>
 </head>
 <body>
