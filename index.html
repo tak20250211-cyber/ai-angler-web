@@ -33,8 +33,47 @@
   <link rel="manifest" href="manifest.json">
 
   <!-- Google Maps JavaScript API（ブラウザ用キー：HTTPリファラーで
-       tak20250211-cyber.github.io に制限済み。ブラウザキーは公開が前提の設計）。 -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm4afErmrAAPiG9644L5_D3-Zx9vsWbmg&loading=async" async defer></script>
+       tak20250211-cyber.github.io に制限済み。ブラウザキーは公開が前提の設計）。
+       地図に加え Places（入力候補）・Geocoding（地名→座標）ライブラリを読み込む。 -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm4afErmrAAPiG9644L5_D3-Zx9vsWbmg&libraries=places&loading=async" async defer></script>
+  <script>
+    // 地名・駅・建物名の入力候補（Places Autocomplete）と地名→座標（Geocoding）。
+    // Flutter(Dart) から呼ぶ薄いラッパー。google.maps 未ロード時は空/nullを返す。
+    window.aiAnglerAutocomplete = async function (input) {
+      try {
+        if (!(window.google && google.maps && google.maps.places)) return [];
+        const svc = new google.maps.places.AutocompleteService();
+        const res = await svc.getPlacePredictions({
+          input: input, language: 'ja', componentRestrictions: { country: 'jp' },
+        });
+        return (res.predictions || []).map(function (p) {
+          return { desc: p.description, placeId: p.place_id };
+        });
+      } catch (e) { return []; }
+    };
+    window.aiAnglerGeocode = async function (query) {
+      try {
+        if (!(window.google && google.maps)) return null;
+        const g = new google.maps.Geocoder();
+        const r = await g.geocode({ address: query, region: 'jp', language: 'ja' });
+        const results = r.results || [];
+        if (!results.length) return null;
+        const loc = results[0].geometry.location;
+        return { lat: loc.lat(), lng: loc.lng(), label: results[0].formatted_address };
+      } catch (e) { return null; }
+    };
+    window.aiAnglerGeocodePlaceId = async function (placeId) {
+      try {
+        if (!(window.google && google.maps)) return null;
+        const g = new google.maps.Geocoder();
+        const r = await g.geocode({ placeId: placeId, language: 'ja' });
+        const results = r.results || [];
+        if (!results.length) return null;
+        const loc = results[0].geometry.location;
+        return { lat: loc.lat(), lng: loc.lng(), label: results[0].formatted_address };
+      } catch (e) { return null; }
+    };
+  </script>
 </head>
 <body>
   <!--
