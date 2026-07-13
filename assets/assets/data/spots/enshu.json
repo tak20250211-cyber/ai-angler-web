@@ -1,0 +1,185 @@
+{
+  "region_id": "enshu",
+  "tier": "detailed",
+  "spots": [
+    {
+      "id": "enshu_001",
+      "name": "弁天島海浜公園",
+      "lat": 34.6853,
+      "lng": 137.6083,
+      "region": "遠州・浜名湖",
+      "prefecture": "静岡県",
+      "type": "surf",
+      "types_allowed": [
+        "ちょい投げ",
+        "投げ釣り",
+        "ルアー",
+        "サビキ"
+      ],
+      "target_fish": [
+        "シロギス",
+        "ハゼ",
+        "カレイ",
+        "クロダイ",
+        "セイゴ",
+        "マゴチ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "足洗い場",
+        "コンビニ近い"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料（駐車場は有料）",
+      "notes": "浜名湖の赤い鳥居が目印。JR弁天島駅すぐ。ちょい投げが定番。夏は海水浴で混雑するため要注意。フグが多く仕掛けは多めに。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": "https://www.ishiguro-gr.com/enjoy/fishing-post/detail.php?id=165"
+    },
+    {
+      "id": "enshu_002",
+      "name": "浜名湖 舞阪港・網干場（今切口）",
+      "lat": 34.6825,
+      "lng": 137.6116,
+      "region": "遠州・浜名湖",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "クロダイ",
+        "キビレ",
+        "シーバス",
+        "サヨリ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": false,
+      "night_fishing": true,
+      "fee": "無料（駐車場1回410円）",
+      "notes": "今切口の潮通しがよく汽水魚が濃い。漁港のため漁業関係者の作業と立入禁止区域に注意。駐車場・トイレは整備。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": "https://aichi-turi.com/hamanako-imakiri-maisaka-point/"
+    },
+    {
+      "id": "enshu_003",
+      "name": "新居弁天海釣公園",
+      "lat": 34.6773,
+      "lng": 137.5686,
+      "region": "遠州・浜名湖",
+      "prefecture": "静岡県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "エギング",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "シロギス",
+        "カレイ",
+        "クロダイ",
+        "カワハギ",
+        "メバル",
+        "タコ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "自販機",
+        "売店",
+        "隣接公園"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "駐車場有料",
+      "notes": "施設が整い家族向け。隣接に遊具のある公園。近くに海水浴場があり夏場は混雑。駐車料金は現地/公式で確認を。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": "https://www.ishiguro-gr.com/enjoy/fishing-post/detail.php?id=166"
+    },
+    {
+      "id": "enshu_004",
+      "name": "福田漁港",
+      "lat": 34.6553,
+      "lng": 137.8503,
+      "region": "遠州・浜名湖",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "投げ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "シロギス",
+        "イワシ",
+        "ヒラメ",
+        "クロダイ",
+        "青物"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "手洗い場",
+        "広場"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "160台の無料駐車場・トイレ・手足洗い場が整い家族向け。遠州灘の好ロケーション。漁業関係者の作業の妨げにならないよう注意。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": "https://www.ishiguro-gr.com/enjoy/fishing-post/detail.php?id=72"
+    },
+    {
+      "id": "enshu_005",
+      "name": "御前崎港（西埠頭・市場前）",
+      "lat": 34.6320,
+      "lng": 138.2090,
+      "region": "遠州・浜名湖",
+      "prefecture": "静岡県",
+      "type": "breakwater",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "エギング",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "シロギス",
+        "クロダイ",
+        "アオリイカ",
+        "青物",
+        "カサゴ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "港内の多くは本来釣り場ではなく立入禁止区域あり。国交省の釣り文化振興モデル港に認定された市場周辺・西ふ頭官庁船溜まりのみで、現地の案内表示に必ず従うこと。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": "https://fishing-walker.com/shizuoka-omaezakikou/"
+    }
+  ]
+}

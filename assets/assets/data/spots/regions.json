@@ -15,6 +15,19 @@
       "file": "suruga_bay.json"
     },
     {
+      "id": "enshu",
+      "name": "遠州・浜名湖",
+      "prefectures": [
+        "静岡県"
+      ],
+      "center": {
+        "lat": 34.66,
+        "lng": 137.78
+      },
+      "tier": "detailed",
+      "file": "enshu.json"
+    },
+    {
       "id": "tokyo_bay",
       "name": "東京湾",
       "prefectures": [
