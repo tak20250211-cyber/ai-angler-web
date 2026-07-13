@@ -92,22 +92,42 @@
     };
     // 現在地（navigator.geolocation を直接使う）。iOS Safari では
     // geolocator_web が Permissions API 周りで失敗しやすいため、素の API を
-    // ユーザー操作（ボタン）から呼ぶのが最も確実。戻り値 {lat,lng} or null。
+    // ユーザー操作（ボタン）から呼ぶのが最も確実。
+    // 戻り値：{lat,lng}（成功）／{err:'denied'|'unavailable'|'timeout'|'unsupported'}（失敗）。
     window.aiAnglerCurrentPosition = function (timeoutMs) {
       return new Promise(function (resolve) {
         try {
-          if (!navigator.geolocation) { resolve(null); return; }
+          if (!navigator.geolocation) { resolve({ err: 'unsupported' }); return; }
           var done = false;
           var ms = timeoutMs || 20000;
-          var timer = setTimeout(function () { if (!done) { done = true; resolve(null); } }, ms);
+          var timer = setTimeout(function () { if (!done) { done = true; resolve({ err: 'timeout' }); } }, ms);
           navigator.geolocation.getCurrentPosition(function (p) {
             if (done) return; done = true; clearTimeout(timer);
             resolve({ lat: p.coords.latitude, lng: p.coords.longitude });
           }, function (err) {
             if (done) return; done = true; clearTimeout(timer);
-            resolve(null);
+            var code = err && err.code;
+            resolve({ err: code === 1 ? 'denied' : code === 3 ? 'timeout' : 'unavailable' });
           }, { enableHighAccuracy: false, timeout: ms, maximumAge: 60000 });
-        } catch (e) { resolve(null); }
+        } catch (e) { resolve({ err: 'unsupported' }); }
+      });
+    };
+    // GPSが使えない時の保険：IPからおおよその現在地を取得（許可不要・市区町村レベル）。
+    // 戻り値：{lat,lng,label}（成功）／null。
+    window.aiAnglerIpLocate = function () {
+      return new Promise(function (resolve) {
+        var done = false;
+        var timer = setTimeout(function () { if (!done) { done = true; resolve(null); } }, 6000);
+        fetch('https://ipwho.is/', { cache: 'no-store' })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (done) return; done = true; clearTimeout(timer);
+            if (d && d.success !== false && typeof d.latitude === 'number' && typeof d.longitude === 'number') {
+              var name = [d.city, d.region].filter(Boolean).join('・');
+              resolve({ lat: d.latitude, lng: d.longitude, label: name || 'およその現在地' });
+            } else { resolve(null); }
+          })
+          .catch(function () { if (!done) { done = true; clearTimeout(timer); resolve(null); } });
       });
     };
     // 出発地 → 各目的地の「実際の道路移動時間/距離」（Distance Matrix）。
