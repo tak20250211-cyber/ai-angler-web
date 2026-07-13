@@ -11,9 +11,22 @@
       "region": "北海道・苫小牧",
       "prefecture": "北海道",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ルアー"],
-      "target_fish": ["チカ", "カレイ", "アブラコ", "サバ", "ホッケ"],
-      "facilities": ["駐車場", "トイレ"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "チカ",
+        "カレイ",
+        "アブラコ",
+        "サバ",
+        "ホッケ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "有料",
@@ -30,9 +43,23 @@
       "region": "新潟・上越",
       "prefecture": "新潟県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ルアー", "エギング"],
-      "target_fish": ["アジ", "サバ", "クロダイ", "アオリイカ", "カレイ"],
-      "facilities": ["駐車場", "トイレ"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "クロダイ",
+        "アオリイカ",
+        "カレイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "有料",
@@ -49,9 +76,25 @@
       "region": "大阪湾",
       "prefecture": "大阪府",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ウキ釣り", "ルアー"],
-      "target_fish": ["アジ", "サバ", "イワシ", "タチウオ", "チヌ"],
-      "facilities": ["駐車場", "トイレ", "柵", "レンタル竿"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "タチウオ",
+        "チヌ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "柵",
+        "レンタル竿"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "無料",
@@ -68,9 +111,25 @@
       "region": "大阪湾",
       "prefecture": "兵庫県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ウキ釣り"],
-      "target_fish": ["アジ", "サバ", "メバル", "カレイ", "タコ"],
-      "facilities": ["駐車場", "トイレ", "売店", "柵", "レンタル竿"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "メバル",
+        "カレイ",
+        "タコ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "柵",
+        "レンタル竿"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "有料",
@@ -87,9 +146,22 @@
       "region": "瀬戸内・山口",
       "prefecture": "山口県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ウキ釣り"],
-      "target_fish": ["アジ", "サバ", "メバル", "カサゴ", "クロダイ"],
-      "facilities": ["駐車場", "トイレ"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "メバル",
+        "カサゴ",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
       "family_friendly": true,
       "night_fishing": true,
       "fee": "有料",
@@ -106,9 +178,23 @@
       "region": "瀬戸内・香川",
       "prefecture": "香川県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ウキ釣り", "ちょい投げ"],
-      "target_fish": ["チヌ", "メバル", "キス", "アジ", "カレイ"],
-      "facilities": ["駐車場", "トイレ", "レンタル竿"],
+      "types_allowed": [
+        "サビキ",
+        "ウキ釣り",
+        "ちょい投げ"
+      ],
+      "target_fish": [
+        "チヌ",
+        "メバル",
+        "キス",
+        "アジ",
+        "カレイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "レンタル竿"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "有料",
@@ -125,9 +211,24 @@
       "region": "博多湾・北九州",
       "prefecture": "福岡県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ルアー", "エギング"],
-      "target_fish": ["アジ", "サバ", "キス", "アオリイカ", "クロダイ"],
-      "facilities": ["駐車場", "トイレ", "レンタル竿"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "キス",
+        "アオリイカ",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "レンタル竿"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "有料",
@@ -139,14 +240,30 @@
     {
       "id": "fac_fukuoka_umizuri",
       "name": "福岡市海づり公園",
-      "lat": 33.630,
+      "lat": 33.63,
       "lng": 130.205,
       "region": "博多湾・福岡",
       "prefecture": "福岡県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ウキ釣り"],
-      "target_fish": ["アジ", "サバ", "イサキ", "アオリイカ", "クロダイ"],
-      "facilities": ["駐車場", "トイレ", "売店", "柵", "レンタル竿"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イサキ",
+        "アオリイカ",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "柵",
+        "レンタル竿"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "有料",
@@ -163,9 +280,24 @@
       "region": "秋田・東北",
       "prefecture": "秋田県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ちょい投げ", "ルアー"],
-      "target_fish": ["アジ", "サバ", "イワシ", "クロダイ", "サゴシ"],
-      "facilities": ["駐車場", "トイレ", "レンタル竿", "レンタルライジャケ"],
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "サバ",
+        "イワシ",
+        "クロダイ",
+        "サゴシ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "レンタル竿",
+        "レンタルライジャケ"
+      ],
       "family_friendly": true,
       "night_fishing": false,
       "fee": "有料",
@@ -178,19 +310,170 @@
       "id": "fac_okinawa_uminchu",
       "name": "うみんちゅワーフ（北谷）",
       "lat": 26.317,
-      "lng": 127.760,
+      "lng": 127.76,
       "region": "沖縄本島・中部",
       "prefecture": "沖縄県",
       "type": "protected_pier",
-      "types_allowed": ["サビキ", "ウキ釣り", "ルアー"],
-      "target_fish": ["グルクン", "チン(ミナミクロダイ)", "ガーラ", "タマン"],
-      "facilities": ["駐車場", "トイレ", "売店近い"],
+      "types_allowed": [
+        "サビキ",
+        "ウキ釣り",
+        "ルアー"
+      ],
+      "target_fish": [
+        "グルクン",
+        "チン(ミナミクロダイ)",
+        "ガーラ",
+        "タマン"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店近い"
+      ],
       "family_friendly": true,
       "night_fishing": true,
       "fee": "要確認",
       "notes": "北谷町フィッシャリーナ地区の釣り桟橋。営業時間・利用ルール・料金は公式で要確認。南国の魚が狙える。",
       "official_url": "http://www.uminchu-wharf.jp/index.jsp",
       "source_url": "https://chatantourism.com/en/spot/uminchu-wharf/",
+      "verified_date": "2026-07"
+    },
+    {
+      "id": "fac_ichihara_umizuri",
+      "name": "オリジナルメーカー海づり公園（市原市海づり施設）",
+      "lat": 35.5028,
+      "lng": 140.0836,
+      "region": "東京湾・千葉",
+      "prefecture": "千葉県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "サバ",
+        "シロギス",
+        "カレイ",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "レンタル",
+        "レストラン"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "有料",
+      "notes": "市原市の桟橋式海づり公園。監視員配置で家族・初心者向け。4〜11月6:00〜19:00/12〜3月7:00〜17:00（桟橋は閉園30分前まで）。料金・休園は公式で要確認。",
+      "official_url": "https://ichihara-umizuri.com/",
+      "source_url": "https://ichihara-umizuri.com/",
+      "verified_date": "2026-07"
+    },
+    {
+      "id": "fac_wakayama_marinacity",
+      "name": "和歌山マリーナシティ海釣り公園",
+      "lat": 34.1522,
+      "lng": 135.1573,
+      "region": "和歌山・マリーナシティ",
+      "prefecture": "和歌山県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー",
+        "エギング"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "サバ",
+        "クロダイ",
+        "アオリイカ",
+        "青物"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "売店",
+        "レンタル"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "有料",
+      "notes": "2024年リニューアル。約500mの釣り場・水深5〜7m。7:00〜17:00・火曜休（変動あり）。入場・駐車は有料。料金・営業は公式で要確認。",
+      "official_url": "https://www.marinacity.com/tsuri/",
+      "source_url": "https://www.marinacity.com/tsuri/",
+      "verified_date": "2026-07"
+    },
+    {
+      "id": "fac_sendai_chuo",
+      "name": "仙台港中央公園（NX仙台港パーク）",
+      "lat": 38.2636,
+      "lng": 141.0104,
+      "region": "宮城・仙台港",
+      "prefecture": "宮城県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "サバ",
+        "シロギス",
+        "カレイ",
+        "シャコ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "無料",
+      "notes": "仙台塩釜港は多くが立入禁止で、釣りは仙台港中央公園（海辺の広場）の開放エリアのみ可。宮城県公式の案内に従うこと。周辺の埠頭には入らない。",
+      "official_url": "https://www.pref.miyagi.jp/soshiki/sdsgkown/fishing.html",
+      "source_url": "https://www.pref.miyagi.jp/soshiki/sdsgkown/fishing.html",
+      "verified_date": "2026-07"
+    },
+    {
+      "id": "fac_oita_tanoura",
+      "name": "田ノ浦ビーチ（大分市）",
+      "lat": 33.2386,
+      "lng": 131.6631,
+      "region": "大分・田ノ浦",
+      "prefecture": "大分県",
+      "type": "surf",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "キス",
+        "クロダイ",
+        "カサゴ",
+        "青物"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "無料",
+      "notes": "大分市のビーチ公園。無料駐車場・トイレあり（夜間は駐車場閉鎖）。防波堤まわりで多彩に狙える。海水浴期は遊泳者に配慮。",
+      "official_url": "https://www.city.oita.oita.jp/o177/tanoura_syoukai.html",
+      "source_url": "https://oitaturi.net/archives/281",
       "verified_date": "2026-07"
     }
   ]
