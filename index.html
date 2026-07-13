@@ -51,27 +51,64 @@
         });
       } catch (e) { return []; }
     };
-    window.aiAnglerGeocode = async function (query) {
-      try {
-        if (!(window.google && google.maps)) return null;
-        const g = new google.maps.Geocoder();
-        const r = await g.geocode({ address: query, region: 'jp', language: 'ja' });
-        const results = r.results || [];
-        if (!results.length) return null;
-        const loc = results[0].geometry.location;
-        return { lat: loc.lat(), lng: loc.lng(), label: results[0].formatted_address };
-      } catch (e) { return null; }
+    // 座標解決は Places API を使う（Geocoding API はプロジェクト設定によって
+    // REQUEST_DENIED になり得るため。Places は入力候補と同じ土台で確実に動く）。
+    window.__aiAnglerPlaces = function () {
+      return new google.maps.places.PlacesService(document.createElement('div'));
     };
-    window.aiAnglerGeocodePlaceId = async function (placeId) {
-      try {
-        if (!(window.google && google.maps)) return null;
-        const g = new google.maps.Geocoder();
-        const r = await g.geocode({ placeId: placeId, language: 'ja' });
-        const results = r.results || [];
-        if (!results.length) return null;
-        const loc = results[0].geometry.location;
-        return { lat: loc.lat(), lng: loc.lng(), label: results[0].formatted_address };
-      } catch (e) { return null; }
+    window.aiAnglerGeocode = function (query) {
+      return new Promise(function (resolve) {
+        try {
+          if (!(window.google && google.maps && google.maps.places)) { resolve(null); return; }
+          window.__aiAnglerPlaces().findPlaceFromQuery({
+            query: query,
+            fields: ['name', 'geometry', 'formatted_address'],
+            language: 'ja',
+          }, function (res, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK && res && res[0] && res[0].geometry) {
+              const loc = res[0].geometry.location;
+              resolve({ lat: loc.lat(), lng: loc.lng(), label: res[0].formatted_address || res[0].name || query });
+            } else { resolve(null); }
+          });
+        } catch (e) { resolve(null); }
+      });
+    };
+    window.aiAnglerGeocodePlaceId = function (placeId) {
+      return new Promise(function (resolve) {
+        try {
+          if (!(window.google && google.maps && google.maps.places)) { resolve(null); return; }
+          window.__aiAnglerPlaces().getDetails({
+            placeId: placeId,
+            fields: ['name', 'geometry', 'formatted_address'],
+            language: 'ja',
+          }, function (res, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK && res && res.geometry) {
+              const loc = res.geometry.location;
+              resolve({ lat: loc.lat(), lng: loc.lng(), label: res.formatted_address || res.name || '' });
+            } else { resolve(null); }
+          });
+        } catch (e) { resolve(null); }
+      });
+    };
+    // 現在地（navigator.geolocation を直接使う）。iOS Safari では
+    // geolocator_web が Permissions API 周りで失敗しやすいため、素の API を
+    // ユーザー操作（ボタン）から呼ぶのが最も確実。戻り値 {lat,lng} or null。
+    window.aiAnglerCurrentPosition = function (timeoutMs) {
+      return new Promise(function (resolve) {
+        try {
+          if (!navigator.geolocation) { resolve(null); return; }
+          var done = false;
+          var ms = timeoutMs || 20000;
+          var timer = setTimeout(function () { if (!done) { done = true; resolve(null); } }, ms);
+          navigator.geolocation.getCurrentPosition(function (p) {
+            if (done) return; done = true; clearTimeout(timer);
+            resolve({ lat: p.coords.latitude, lng: p.coords.longitude });
+          }, function (err) {
+            if (done) return; done = true; clearTimeout(timer);
+            resolve(null);
+          }, { enableHighAccuracy: false, timeout: ms, maximumAge: 60000 });
+        } catch (e) { resolve(null); }
+      });
     };
     // 出発地 → 各目的地の「実際の道路移動時間/距離」（Distance Matrix）。
     // destsJson = "[[lat,lng],...]"、mode = DRIVING|WALKING|BICYCLING。
