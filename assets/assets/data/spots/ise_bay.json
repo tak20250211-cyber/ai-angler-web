@@ -1,0 +1,107 @@
+{
+  "region_id": "ise_bay",
+  "tier": "detailed",
+  "spots": [
+    {
+      "id": "ise_001",
+      "name": "新舞子マリンパーク 魚釣り施設",
+      "lat": 34.9875,
+      "lng": 136.8850,
+      "region": "伊勢湾・三河湾",
+      "prefecture": "愛知県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "メバル",
+        "カサゴ",
+        "メジナ",
+        "シロギス",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "柵あり"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "無料（駐車場は土日祝・浜開き期間500円）",
+      "notes": "名古屋から車で約30分。足場が広く平坦で柵もあり家族・初心者向け。営業5:15〜20:00・門扉20時閉（夜釣り不可）。第二駐車場が施設に近い。",
+      "official_url": "http://www.marine-park.jp/fishing/",
+      "verified_date": "2026-07",
+      "source_url": "https://www.ishiguro-gr.com/enjoy/fishing-post/detail.php?id=219"
+    },
+    {
+      "id": "ise_002",
+      "name": "常滑 りんくう釣り護岸",
+      "lat": 34.9036,
+      "lng": 136.8130,
+      "region": "伊勢湾・三河湾",
+      "prefecture": "愛知県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ちょい投げ",
+        "ルアー"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "カサゴ",
+        "クロダイ",
+        "シロギス",
+        "ハゼ",
+        "メバル"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ",
+        "柵あり"
+      ],
+      "family_friendly": true,
+      "night_fishing": false,
+      "fee": "無料（りんくう緑地の駐車場は有料）",
+      "notes": "セントレア対岸。柵つきのフラットな護岸で家族・初心者に安心。指定の釣り護岸以外での釣りは禁止。橋脚方向への投げ釣りは危険。夏季混雑。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": "https://www.ishiguro-gr.com/enjoy/fishing-post/detail.php?id=195"
+    },
+    {
+      "id": "ise_003",
+      "name": "豊浜釣り桟橋",
+      "lat": 34.7050,
+      "lng": 136.9040,
+      "region": "伊勢湾・三河湾",
+      "prefecture": "愛知県",
+      "type": "protected_pier",
+      "types_allowed": [
+        "サビキ",
+        "ウキ釣り"
+      ],
+      "target_fish": [
+        "アジ",
+        "イワシ",
+        "サバ",
+        "カサゴ",
+        "メバル",
+        "クロダイ"
+      ],
+      "facilities": [
+        "駐車場",
+        "トイレ"
+      ],
+      "family_friendly": true,
+      "night_fishing": true,
+      "fee": "無料",
+      "notes": "豊浜漁港の海釣り専用桟橋。初心者向け。ライフベスト着用必須。紀州釣り・投げ釣り・ルアーは禁止。指定エリア以外に駐車しないこと。ゴミは必ず持ち帰り。",
+      "official_url": null,
+      "verified_date": "2026-07",
+      "source_url": "https://www.ishiguro-gr.com/enjoy/fishing-post/detail.php?id=158"
+    }
+  ]
+}

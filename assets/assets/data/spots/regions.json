@@ -28,6 +28,20 @@
       "file": "enshu.json"
     },
     {
+      "id": "ise_bay",
+      "name": "伊勢湾・三河湾",
+      "prefectures": [
+        "愛知県",
+        "三重県"
+      ],
+      "center": {
+        "lat": 34.9,
+        "lng": 136.85
+      },
+      "tier": "detailed",
+      "file": "ise_bay.json"
+    },
+    {
       "id": "tokyo_bay",
       "name": "東京湾",
       "prefectures": [
