@@ -56,38 +56,49 @@
     window.__aiAnglerPlaces = function () {
       return new google.maps.places.PlacesService(document.createElement('div'));
     };
-    window.aiAnglerGeocode = function (query) {
+    // コールバックが返らないケースに備えて必ずタイムアウトで打ち切る。
+    // 返らないまま待つと、アプリ側の「プラン作成」が固まって二度と押せなくなる。
+    window.__aiAnglerWithTimeout = function (ms, fallback, work) {
       return new Promise(function (resolve) {
-        try {
-          if (!(window.google && google.maps && google.maps.places)) { resolve(null); return; }
-          window.__aiAnglerPlaces().findPlaceFromQuery({
-            query: query,
-            fields: ['name', 'geometry', 'formatted_address'],
-            language: 'ja',
-          }, function (res, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK && res && res[0] && res[0].geometry) {
-              const loc = res[0].geometry.location;
-              resolve({ lat: loc.lat(), lng: loc.lng(), label: res[0].formatted_address || res[0].name || query });
-            } else { resolve(null); }
-          });
-        } catch (e) { resolve(null); }
+        var done = false;
+        var finish = function (v) {
+          if (done) return;
+          done = true;
+          clearTimeout(timer);
+          resolve(v);
+        };
+        var timer = setTimeout(function () { finish(fallback); }, ms);
+        try { work(finish); } catch (e) { finish(fallback); }
+      });
+    };
+    window.aiAnglerGeocode = function (query) {
+      return window.__aiAnglerWithTimeout(8000, null, function (done) {
+        if (!(window.google && google.maps && google.maps.places)) { done(null); return; }
+        window.__aiAnglerPlaces().findPlaceFromQuery({
+          query: query,
+          fields: ['name', 'geometry', 'formatted_address'],
+          language: 'ja',
+        }, function (res, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK && res && res[0] && res[0].geometry) {
+            const loc = res[0].geometry.location;
+            done({ lat: loc.lat(), lng: loc.lng(), label: res[0].formatted_address || res[0].name || query });
+          } else { done(null); }
+        });
       });
     };
     window.aiAnglerGeocodePlaceId = function (placeId) {
-      return new Promise(function (resolve) {
-        try {
-          if (!(window.google && google.maps && google.maps.places)) { resolve(null); return; }
-          window.__aiAnglerPlaces().getDetails({
-            placeId: placeId,
-            fields: ['name', 'geometry', 'formatted_address'],
-            language: 'ja',
-          }, function (res, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK && res && res.geometry) {
-              const loc = res.geometry.location;
-              resolve({ lat: loc.lat(), lng: loc.lng(), label: res.formatted_address || res.name || '' });
-            } else { resolve(null); }
-          });
-        } catch (e) { resolve(null); }
+      return window.__aiAnglerWithTimeout(8000, null, function (done) {
+        if (!(window.google && google.maps && google.maps.places)) { done(null); return; }
+        window.__aiAnglerPlaces().getDetails({
+          placeId: placeId,
+          fields: ['name', 'geometry', 'formatted_address'],
+          language: 'ja',
+        }, function (res, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK && res && res.geometry) {
+            const loc = res.geometry.location;
+            done({ lat: loc.lat(), lng: loc.lng(), label: res.formatted_address || res.name || '' });
+          } else { done(null); }
+        });
       });
     };
     // 現在地（navigator.geolocation を直接使う）。iOS Safari では
@@ -134,36 +145,35 @@
     // destsJson = "[[lat,lng],...]"、mode = DRIVING|WALKING|BICYCLING。
     // 戻り値：[{min:分, km:キロ}]（経路不明は {min:null,km:null}）。
     window.aiAnglerDistanceMatrix = function (oLat, oLng, destsJson, mode) {
-      return new Promise(function (resolve) {
-        try {
-          const dests = JSON.parse(destsJson);
-          const nulls = dests.map(function () { return { min: null, km: null }; });
-          if (!(window.google && google.maps)) { resolve(nulls); return; }
-          const svc = new google.maps.DistanceMatrixService();
-          svc.getDistanceMatrix({
-            origins: [new google.maps.LatLng(oLat, oLng)],
-            destinations: dests.map(function (d) {
-              return new google.maps.LatLng(d[0], d[1]);
-            }),
-            travelMode: mode || 'DRIVING',
-          }, function (res, status) {
-            if (status !== 'OK' || !res || !res.rows || !res.rows[0]) {
-              resolve(nulls); return;
+      var nulls = [];
+      try {
+        nulls = JSON.parse(destsJson).map(function () { return { min: null, km: null }; });
+      } catch (e) { nulls = []; }
+      // 返らないままだとプラン作成が固まるため、必ず打ち切る（概算にフォールバック）。
+      return window.__aiAnglerWithTimeout(10000, nulls, function (done) {
+        const dests = JSON.parse(destsJson);
+        if (!(window.google && google.maps)) { done(nulls); return; }
+        const svc = new google.maps.DistanceMatrixService();
+        svc.getDistanceMatrix({
+          origins: [new google.maps.LatLng(oLat, oLng)],
+          destinations: dests.map(function (d) {
+            return new google.maps.LatLng(d[0], d[1]);
+          }),
+          travelMode: mode || 'DRIVING',
+        }, function (res, status) {
+          if (status !== 'OK' || !res || !res.rows || !res.rows[0]) {
+            done(nulls); return;
+          }
+          done(res.rows[0].elements.map(function (e) {
+            if (e.status === 'OK' && e.duration && e.distance) {
+              return {
+                min: Math.round(e.duration.value / 60),
+                km: Math.round((e.distance.value / 1000) * 10) / 10,
+              };
             }
-            resolve(res.rows[0].elements.map(function (e) {
-              if (e.status === 'OK' && e.duration && e.distance) {
-                return {
-                  min: Math.round(e.duration.value / 60),
-                  km: Math.round((e.distance.value / 1000) * 10) / 10,
-                };
-              }
-              return { min: null, km: null };
-            }));
-          });
-        } catch (e) {
-          try { resolve(JSON.parse(destsJson).map(function () { return { min: null, km: null }; })); }
-          catch (_) { resolve([]); }
-        }
+            return { min: null, km: null };
+          }));
+        });
       });
     };
   </script>
