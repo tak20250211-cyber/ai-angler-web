@@ -67,6 +67,21 @@
       },
       "tier": "detailed",
       "file": "sagami_bay.json"
+    },
+    {
+      "id": "fuji_freshwater",
+      "name": "富士・箱根の湖と管理釣り場",
+      "prefectures": [
+        "静岡県",
+        "神奈川県",
+        "山梨県"
+      ],
+      "center": {
+        "lat": 35.3,
+        "lng": 138.92
+      },
+      "tier": "detailed",
+      "file": "fuji_freshwater.json"
     }
   ]
 }
