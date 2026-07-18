@@ -4,6 +4,7 @@
   "spots": [
     {
       "id": "enshu_001",
+      "water_type": "brackish",
       "name": "弁天島海浜公園",
       "lat": 34.6853,
       "lng": 137.6083,
@@ -40,6 +41,7 @@
     },
     {
       "id": "enshu_002",
+      "water_type": "brackish",
       "name": "浜名湖 舞阪港・網干場（今切口）",
       "lat": 34.6825,
       "lng": 137.6116,
@@ -73,6 +75,7 @@
     },
     {
       "id": "enshu_003",
+      "water_type": "brackish",
       "name": "新居弁天海釣公園",
       "lat": 34.6773,
       "lng": 137.5686,
