@@ -1,11 +1,11 @@
 {
-    "name": "ai_angler_app",
-    "short_name": "ai_angler_app",
+    "name": "AI Angler",
+    "short_name": "AI Angler",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#1565C0",
+    "theme_color": "#1565C0",
+    "description": "場所・時間・目的から釣りプラン（行き先と釣り方）を提案するアプリ",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
